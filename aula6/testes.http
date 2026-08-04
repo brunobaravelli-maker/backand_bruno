@@ -1,0 +1,39 @@
+### Listar todos os alunos
+GET http://localhost:3000/alunos
+
+###
+
+### Buscar aluno pelo id 1
+GET http://localhost:3000/alunos/1
+
+###
+
+### Buscar aluno inexistente
+GET http://localhost:3000/alunos/99
+
+###
+
+### Criar um novo aluno
+POST http://localhost:3000/alunos
+Content-Type: application/json
+
+{
+  "nome": "Carlos",
+  "nota": 9.0
+}
+
+###
+
+### Atualizar aluno de id 1
+PUT http://localhost:3000/alunos/1
+Content-Type: application/json
+
+{
+  "nome": "Ana Paula",
+  "nota": 9.5
+}
+
+###
+
+### Remover aluno de id 2
+DELETE http://localhost:3000/alunos/2

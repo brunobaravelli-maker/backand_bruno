@@ -1,0 +1,44 @@
+### Teste 1 - POST sem nome (400)
+POST http://localhost:3000/alunos
+Content-Type: application/json
+
+{
+  "nota": 8
+}
+
+###
+
+### Teste 2 - POST sem nota (400)
+POST http://localhost:3000/alunos
+Content-Type: application/json
+
+{
+  "nome": "Ana"
+}
+
+###
+
+### Teste 3 - POST com nota inválida (400)
+POST http://localhost:3000/alunos
+Content-Type: application/json
+
+{
+  "nome": "Ana",
+  "nota": 15
+}
+
+###
+
+### Teste 4 - POST correto (201)
+POST http://localhost:3000/alunos
+Content-Type: application/json
+
+{
+  "nome": "Ana",
+  "nota": 8
+}
+
+###
+
+### Teste 5 - Buscar ID inexistente (404)
+GET http://localhost:3000/alunos/999
